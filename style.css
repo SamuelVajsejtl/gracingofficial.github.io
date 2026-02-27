@@ -1,0 +1,109 @@
+/* ---------- BODY & HTML ---------- */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(22,22,22);
+}
+
+body {
+    background-image: url('Gracingbackground.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    flex: 1; /* allow body to grow with content */
+}
+
+/* ---------- MAIN CONTAINER ---------- */
+.backgrounddiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0; /* spacing top/bottom */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* ---------- CARDS ---------- */
+.div1, .contactdiv {
+    padding: 22px;
+    border-radius: 22px;
+    margin: 2rem 0;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgb(200, 200, 200);
+    width: auto;
+    max-width: 36rem;
+    animation: float 6s ease-in-out infinite;
+    box-sizing: border-box;
+}
+
+.contactdiv a {
+    color: rgb(200, 200, 200);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* ---------- FLOAT ANIMATION ---------- */
+@keyframes float {
+    0% { transform: translateY(0rem); }
+    50% { transform: translateY(-0.3rem); }
+    100% { transform: translateY(0rem); }
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    width: 100%;
+    background-color: rgba(255,255,255,0.1);
+    color: rgb(200, 200, 200);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto; /* pushes footer to bottom if content is short */
+}
+
+/* ---------- LINKS & TEXT ---------- */
+a, p, h1, h2 {
+    transition: color 0.3s ease;
+}
+
+a:hover, p:hover, h1:hover, h2:hover {
+    color: #ff2222;
+}
+
+/* ---------- NAV ---------- */
+nav {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: rgb(200, 200, 200);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff2222;
+}
